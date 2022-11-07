@@ -1,7 +1,7 @@
 CreateThread(function()
     while true do
-        local player = PlayerPedId()
-        if IsPedArmed(player, 7) then
+        local Player = PlayerPedId()
+        if IsPedArmed(Player, 7) and IsPlayerFreeAiming(Player) then
             SendNUIMessage({
                 type = "dot",
                 display = true
